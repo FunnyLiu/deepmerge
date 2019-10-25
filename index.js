@@ -6,6 +6,7 @@ function emptyTarget(val) {
 
 function cloneUnlessOtherwiseSpecified(value, options) {
 	return (options.clone !== false && options.isMergeableObject(value))
+		// 一层层的递归处理
 		? deepmerge(emptyTarget(value), value, options)
 		: value
 }
@@ -71,7 +72,7 @@ function mergeObject(target, source, options) {
 	})
 	return destination
 }
-
+// 递归处理merge对象或数组
 function deepmerge(target, source, options) {
 	options = options || {}
 	options.arrayMerge = options.arrayMerge || defaultArrayMerge

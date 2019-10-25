@@ -1,3 +1,41 @@
+
+# 源码分析
+
+## 文件结构
+
+``` bash
+/Users/liufang/openSource/FunnyLiu/deepmerge
+├── changelog.md
+├── index.d.ts
+├── index.js - 入口文件，提供merge方法
+├── license.txt
+├── package-lock.json
+├── package.json
+├── readme.md
+├── rollup.config.js
+
+file: 14
+
+ignored: directory (1)
+
+```
+
+## 外部模块依赖
+
+请在： http://npm.broofa.com?q=deepmerge 查看
+
+## 内部模块依赖
+
+![img](./inner.svg)
+  
+
+## 逐个文件分析
+
+### index.js
+
+提供merge方法。递归merge对象或数组
+
+
 # deepmerge
 
 Merges the enumerable properties of two or more objects deeply.
